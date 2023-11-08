@@ -195,7 +195,6 @@ namespace ToDoList
         {
             DataTable Dt = Data("SELECT STATUS, TITLE, PRIORITY, TIME_BEGIN, TIME_END, NOTE FROM TODOLIST WHERE STATUS ='Chưa hoàn thành'");
             Data_View.DataSource = Dt;
-            Data_View.DataSource = Dt;
             edit_btn.Enabled = false;
             del_btn.Enabled = false;
             add_btn.Enabled = false;
@@ -204,7 +203,6 @@ namespace ToDoList
         private void Exp_btn_Click(object sender, EventArgs e)
         {
             DataTable Dt = Data("SELECT STATUS, TITLE, PRIORITY, TIME_BEGIN, TIME_END, NOTE FROM TODOLIST WHERE STATUS ='Quá Hạn'");
-            Data_View.DataSource = Dt;
             Data_View.DataSource = Dt;
             edit_btn.Enabled = false;
             del_btn.Enabled = false;
@@ -215,7 +213,6 @@ namespace ToDoList
         {
             DataTable Dt = Data("SELECT STATUS, TITLE, PRIORITY, TIME_BEGIN, TIME_END, NOTE FROM TODOLIST WHERE STATUS ='Đang làm'");
             Data_View.DataSource = Dt;
-            Data_View.DataSource = Dt;
             edit_btn.Enabled = false;
             del_btn.Enabled = false;
             add_btn.Enabled = false;
@@ -224,7 +221,6 @@ namespace ToDoList
         private void Cc_btn_Click(object sender, EventArgs e)
         {
             DataTable Dt = Data("SELECT STATUS, TITLE, PRIORITY, TIME_BEGIN, TIME_END, NOTE FROM TODOLIST WHERE STATUS ='Bị huỷ'");
-            Data_View.DataSource = Dt;
             Data_View.DataSource = Dt;
             edit_btn.Enabled = false;
             del_btn.Enabled = false;
@@ -263,6 +259,18 @@ namespace ToDoList
                 }
                 Data_View.DataSource = Dt;
             }
+            edit_btn.Enabled = false;
+            del_btn.Enabled = false;
+            add_btn.Enabled = false;
+        }
+
+        private void Show_btn_Click(object sender, EventArgs e)
+        {
+            DataTable DT = Data($"SELECT STATUS, TITLE, PRIORITY, TIME_BEGIN, TIME_END, NOTE FROM TODOLIST WHERE TITLE like '%{timkiem_txt.Text}%'");
+            Data_View.DataSource = DT;
+            edit_btn.Enabled = false;
+            del_btn.Enabled = false;
+            add_btn.Enabled = false;
         }
     }
 }

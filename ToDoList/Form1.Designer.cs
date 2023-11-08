@@ -55,6 +55,9 @@
             this.del_btn = new System.Windows.Forms.Button();
             this.Data_View = new System.Windows.Forms.DataGridView();
             this.reset_btn = new System.Windows.Forms.Button();
+            this.timkiem_txt = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.show_btn = new System.Windows.Forms.Button();
             this.grDT.SuspendLayout();
             this.grbx.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Data_View)).BeginInit();
@@ -246,6 +249,9 @@
             this.grbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.grbx.BackColor = System.Drawing.Color.Teal;
+            this.grbx.Controls.Add(this.show_btn);
+            this.grbx.Controls.Add(this.label8);
+            this.grbx.Controls.Add(this.timkiem_txt);
             this.grbx.Controls.Add(this.label5);
             this.grbx.Controls.Add(this.dateTime);
             this.grbx.Controls.Add(this.PrioritySelect);
@@ -431,6 +437,40 @@
             this.reset_btn.UseVisualStyleBackColor = false;
             this.reset_btn.Click += new System.EventHandler(this.Reset_btn_Click);
             // 
+            // timkiem_txt
+            // 
+            this.timkiem_txt.Location = new System.Drawing.Point(76, 252);
+            this.timkiem_txt.Name = "timkiem_txt";
+            this.timkiem_txt.Size = new System.Drawing.Size(202, 20);
+            this.timkiem_txt.TabIndex = 9;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DimGray;
+            this.label8.Location = new System.Drawing.Point(6, 249);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(64, 16);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Tìm kiếm:";
+            // 
+            // show_btn
+            // 
+            this.show_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.show_btn.BackColor = System.Drawing.Color.Teal;
+            this.show_btn.FlatAppearance.BorderSize = 0;
+            this.show_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.show_btn.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.show_btn.ForeColor = System.Drawing.Color.LightGray;
+            this.show_btn.Location = new System.Drawing.Point(203, 278);
+            this.show_btn.Name = "show_btn";
+            this.show_btn.Size = new System.Drawing.Size(75, 23);
+            this.show_btn.TabIndex = 6;
+            this.show_btn.Text = "hiển thị";
+            this.show_btn.UseVisualStyleBackColor = false;
+            this.show_btn.Click += new System.EventHandler(this.Show_btn_Click);
+            // 
             // ToDoList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -484,6 +524,9 @@
         private System.Windows.Forms.ComboBox Stt_cb;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button reset_btn;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox timkiem_txt;
+        private System.Windows.Forms.Button show_btn;
     }
 }
 
